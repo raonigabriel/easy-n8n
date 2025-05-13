@@ -14,10 +14,10 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        -440,
-        -140
+        -760,
+        -120
       ],
-      "id": "11e903b1-48df-4ee4-8938-b76f09fb30ea",
+      "id": "f5b4dcbb-bc2a-4b34-9eff-20fa445fbc1c",
       "name": "When chat message received",
       "webhookId": "69f56b50-5750-479c-9d4f-86dca203d8b3"
     },
@@ -30,10 +30,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.9,
       "position": [
-        -80,
-        -140
+        -400,
+        -120
       ],
-      "id": "fcbd6123-ef65-4a44-a305-07ddd2a3eb3d",
+      "id": "164b3883-95a1-4f35-b51a-7814b4d7d9a3",
       "name": "AI Agent"
     },
     {
@@ -48,14 +48,14 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
       "typeVersion": 1.1,
       "position": [
-        160,
-        60
+        -160,
+        80
       ],
-      "id": "3ab7799f-806b-47e4-a650-818f78838cad",
+      "id": "c3893d88-f93b-4ced-b258-bc6587e60cc6",
       "name": "Postgres PGVector Store",
       "credentials": {
         "postgres": {
-          "id": "m24TX4WQSDb5SDrS",
+          "id": "o9GP2TgDuLfm5BfE",
           "name": "Postgres account"
         }
       }
@@ -67,14 +67,14 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1.2,
       "position": [
-        180,
-        240
+        -140,
+        260
       ],
-      "id": "c242f549-71c5-4664-b22a-cd835b1fdf61",
+      "id": "84633051-d567-40e5-86f4-198ab40a8493",
       "name": "Embeddings OpenAI",
       "credentials": {
         "openAiApi": {
-          "id": "O25zo7ZGYB7ypLZz",
+          "id": "JF04VkWoVyfuAYCo",
           "name": "OpenAi account"
         }
       }
@@ -84,10 +84,10 @@
       "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
       "typeVersion": 1,
       "position": [
-        20,
-        60
+        -300,
+        80
       ],
-      "id": "04ff3ed1-478a-4571-a02a-436180b383dd",
+      "id": "609bff58-9598-46e1-a509-ce5e6e5601b6",
       "name": "Wikipedia"
     },
     {
@@ -105,14 +105,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -240,
-        60
+        -560,
+        80
       ],
-      "id": "46b436f4-8fd7-4db8-99d8-11a037e60125",
+      "id": "c0053613-598f-4231-a304-a71e6b8ba4e9",
       "name": "gpt 4.1-mini",
       "credentials": {
         "openAiApi": {
-          "id": "O25zo7ZGYB7ypLZz",
+          "id": "JF04VkWoVyfuAYCo",
           "name": "OpenAi account"
         }
       }
@@ -124,17 +124,32 @@
       "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
       "typeVersion": 1.3,
       "position": [
-        -100,
-        60
+        -420,
+        80
       ],
-      "id": "a7e9729f-d2d7-493b-845d-e662d708e835",
+      "id": "a980a78b-30ea-4a09-9766-cb0b096823f3",
       "name": "Postgres Chat Memory",
       "credentials": {
         "postgres": {
-          "id": "m24TX4WQSDb5SDrS",
+          "id": "o9GP2TgDuLfm5BfE",
           "name": "Postgres account"
         }
       }
+    },
+    {
+      "parameters": {
+        "content": "## Simple RAG (naive)\n\n* Ingest\n* **Agent**\n\nhttps://github.com/raonigabriel/easy-n8n/tree/master/demo-rag",
+        "height": 200,
+        "width": 320
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -920,
+        100
+      ],
+      "typeVersion": 1,
+      "id": "967d0431-e0e0-41f6-b1ad-ff4925ff373a",
+      "name": "Sticky Note"
     }
   ],
   "pinData": {},
@@ -183,11 +198,6 @@
         ]
       ]
     },
-    "AI Agent": {
-      "main": [
-        []
-      ]
-    },
     "gpt 4.1-mini": {
       "ai_languageModel": [
         [
@@ -211,15 +221,15 @@
       ]
     }
   },
-  "active": true,
+  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "16a004a2-86c9-42fc-a302-bee71e60abf2",
+  "versionId": "c10ded3d-5942-4c7f-97e4-be01296207fe",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7e0fec4b281e56ef458b63cb966ca83a6460f0748605c50e4bd1bf0734d18030"
   },
-  "id": "U3KyM5SWi30PCRWd",
+  "id": "tAZFz6NRijbj6u34",
   "tags": []
 }

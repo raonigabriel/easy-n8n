@@ -6,10 +6,10 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -720,
-        -160
+        -1700,
+        -340
       ],
-      "id": "529081c3-f446-4085-a5df-a8d7e3bcebc6",
+      "id": "f0221283-0740-4a5a-85a9-edfd4d778593",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -20,14 +20,14 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
       "typeVersion": 1.1,
       "position": [
-        -40,
-        -160
+        -1020,
+        -340
       ],
-      "id": "ce8970a5-e703-4dc2-b737-073c3d1d4a90",
+      "id": "5d4a3f41-4fea-4467-9079-5519bb95c55e",
       "name": "Postgres PGVector Store",
       "credentials": {
         "postgres": {
-          "id": "m24TX4WQSDb5SDrS",
+          "id": "o9GP2TgDuLfm5BfE",
           "name": "Postgres account"
         }
       }
@@ -49,10 +49,10 @@
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
       "typeVersion": 1,
       "position": [
-        60,
-        60
+        -920,
+        -120
       ],
-      "id": "820434a7-0e3b-4795-87ca-03a44dee1d96",
+      "id": "e005e39f-6bd9-4938-a9b5-2ba645eb6558",
       "name": "Default Data Loader"
     },
     {
@@ -64,24 +64,24 @@
       "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
       "typeVersion": 1,
       "position": [
-        140,
-        260
+        -840,
+        80
       ],
-      "id": "817de99a-7f28-456d-8bbc-354ad0d0be31",
+      "id": "a55ebf55-1f2e-4a81-9342-f851980fc87a",
       "name": "Recursive Character Text Splitter"
     },
     {
       "parameters": {
-        "url": "https://arq.pciconcursos.com.br/ufpr-promove-concurso-publico-com-25-vagas/1672798/a4b838ec98/edital_de_abertura_n_102_1672798.pdf",
+        "url": "https://raw.githubusercontent.com/raonigabriel/easy-n8n/refs/heads/master/demo-rag/edital_de_abertura_n_102_1672798.pdf",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -280,
-        -160
+        -1260,
+        -340
       ],
-      "id": "50d7cbd3-b0e4-4828-86a4-a28358a6aeaa",
+      "id": "173c64c8-5a01-498b-a8df-fe5b445bfa89",
       "name": "Download PDF"
     },
     {
@@ -93,14 +93,14 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -80,
-        40
+        -1060,
+        -140
       ],
-      "id": "83901511-5adb-4e33-b2a3-ede337a503e7",
+      "id": "7269ff77-d652-4f07-b357-fbaa164f9b7e",
       "name": "text-embeddings-3-small",
       "credentials": {
         "openAiApi": {
-          "id": "O25zo7ZGYB7ypLZz",
+          "id": "JF04VkWoVyfuAYCo",
           "name": "OpenAi account"
         }
       }
@@ -114,17 +114,32 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
       "position": [
-        -500,
-        -160
+        -1480,
+        -340
       ],
-      "id": "a49d92a9-2622-4296-b106-aaa07a4ce8f5",
+      "id": "cb9b13b5-8fc1-4ae4-855c-d235f6f83418",
       "name": "Drop Table",
       "credentials": {
         "postgres": {
-          "id": "m24TX4WQSDb5SDrS",
+          "id": "o9GP2TgDuLfm5BfE",
           "name": "Postgres account"
         }
       }
+    },
+    {
+      "parameters": {
+        "content": "## Simple RAG (naive)\n\n* **Ingest**\n* Agent\n\nhttps://github.com/raonigabriel/easy-n8n/tree/master/demo-rag",
+        "height": 200,
+        "width": 320
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1580,
+        -80
+      ],
+      "typeVersion": 1,
+      "id": "2c6f49b3-713f-42ac-a969-e0df4c1cae7f",
+      "name": "Sticky Note"
     }
   ],
   "pinData": {},
@@ -200,11 +215,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "bcfa2add-6750-4058-822c-1cfce2a1fee7",
+  "versionId": "469a94c5-363c-4126-bb9d-2a16a7c54bdb",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7e0fec4b281e56ef458b63cb966ca83a6460f0748605c50e4bd1bf0734d18030"
   },
-  "id": "21eb6IaYetaTasyk",
+  "id": "zG2ALzSfCTYsx8MB",
   "tags": []
 }
