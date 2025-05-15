@@ -14,10 +14,10 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        -760,
-        -120
+        100,
+        0
       ],
-      "id": "f5b4dcbb-bc2a-4b34-9eff-20fa445fbc1c",
+      "id": "c4a31e2c-34e6-471d-b699-83f6ecd6f31d",
       "name": "When chat message received",
       "webhookId": "69f56b50-5750-479c-9d4f-86dca203d8b3"
     },
@@ -30,10 +30,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.9,
       "position": [
-        -400,
-        -120
+        360,
+        0
       ],
-      "id": "164b3883-95a1-4f35-b51a-7814b4d7d9a3",
+      "id": "e0e80e9a-0f84-4e94-9250-ffbfb6f006ef",
       "name": "AI Agent"
     },
     {
@@ -48,34 +48,15 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
       "typeVersion": 1.1,
       "position": [
-        -160,
-        80
+        600,
+        200
       ],
-      "id": "c3893d88-f93b-4ced-b258-bc6587e60cc6",
+      "id": "f1fda8d0-175d-4ebd-a354-39fb69f1de9c",
       "name": "Postgres PGVector Store",
       "credentials": {
         "postgres": {
-          "id": "o9GP2TgDuLfm5BfE",
+          "id": "HR0VQhHlh2nl1ik1",
           "name": "Postgres account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
-      "typeVersion": 1.2,
-      "position": [
-        -140,
-        260
-      ],
-      "id": "84633051-d567-40e5-86f4-198ab40a8493",
-      "name": "Embeddings OpenAI",
-      "credentials": {
-        "openAiApi": {
-          "id": "JF04VkWoVyfuAYCo",
-          "name": "OpenAi account"
         }
       }
     },
@@ -84,10 +65,10 @@
       "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
       "typeVersion": 1,
       "position": [
-        -300,
-        80
+        460,
+        200
       ],
-      "id": "609bff58-9598-46e1-a509-ce5e6e5601b6",
+      "id": "af67bba0-9794-458a-9fb8-1fae5a2b0b13",
       "name": "Wikipedia"
     },
     {
@@ -105,14 +86,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -560,
-        80
+        200,
+        200
       ],
-      "id": "c0053613-598f-4231-a304-a71e6b8ba4e9",
+      "id": "27f7db07-200f-47ea-8d15-ca2fb278bf27",
       "name": "gpt 4.1-mini",
       "credentials": {
         "openAiApi": {
-          "id": "JF04VkWoVyfuAYCo",
+          "id": "x8DE0H9zkYq76OXE",
           "name": "OpenAi account"
         }
       }
@@ -124,14 +105,14 @@
       "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
       "typeVersion": 1.3,
       "position": [
-        -420,
-        80
+        340,
+        200
       ],
-      "id": "a980a78b-30ea-4a09-9766-cb0b096823f3",
+      "id": "0db86738-bf29-492d-bc15-5f7fa348df2c",
       "name": "Postgres Chat Memory",
       "credentials": {
         "postgres": {
-          "id": "o9GP2TgDuLfm5BfE",
+          "id": "HR0VQhHlh2nl1ik1",
           "name": "Postgres account"
         }
       }
@@ -144,12 +125,31 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        -920,
-        100
+        -160,
+        220
       ],
       "typeVersion": 1,
-      "id": "967d0431-e0e0-41f6-b1ad-ff4925ff373a",
+      "id": "2b95ffb4-09c4-4fa5-8dc7-52137cddfa07",
       "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        620,
+        360
+      ],
+      "id": "deb27be9-9f6c-43dc-9b69-6563408c5406",
+      "name": "text-embeddings-3-small",
+      "credentials": {
+        "openAiApi": {
+          "id": "x8DE0H9zkYq76OXE",
+          "name": "OpenAi account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -171,17 +171,6 @@
           {
             "node": "AI Agent",
             "type": "ai_tool",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Embeddings OpenAI": {
-      "ai_embedding": [
-        [
-          {
-            "node": "Postgres PGVector Store",
-            "type": "ai_embedding",
             "index": 0
           }
         ]
@@ -219,17 +208,28 @@
           }
         ]
       ]
+    },
+    "text-embeddings-3-small": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Postgres PGVector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "c10ded3d-5942-4c7f-97e4-be01296207fe",
+  "versionId": "a03dfa2b-7e73-4378-b8d8-6eb262fbb49e",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7e0fec4b281e56ef458b63cb966ca83a6460f0748605c50e4bd1bf0734d18030"
   },
-  "id": "tAZFz6NRijbj6u34",
+  "id": "f0rTc8ONjqIKUElo",
   "tags": []
 }
